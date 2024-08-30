@@ -1,0 +1,1 @@
+The objective of this project is to show what I have learned in terms of javascript
