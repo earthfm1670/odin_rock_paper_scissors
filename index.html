@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Project</title>
+</head>
+<body>
+    <script>
+        function getComputerChoice() {
+            const computerChoice = Math.floor((Math.random() * 3) + 1);
+            if (computerChoice === 1) {
+                return "rock";
+            } else if (computerChoice === 2) {
+                return "paper";
+            } else if (computerChoice === 3) {
+                return "scissors";
+            }
+        }
+        
+        function getHumanChoice() {
+            const humanChoice = prompt("Rock Paper Scissors?").toLowerCase();
+            if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+                return humanChoice
+            } else {
+                return prompt("Invalid input, please try again. Rock Paper Scissors?")
+            }
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
