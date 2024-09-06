@@ -9,6 +9,35 @@ function getComputerChoice() {
     }
 }
 
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const btnContainer = document.getElementById("buttonContainer");
+
+btnContainer.addEventListener("click", (event => {
+    let target = event.target;
+    let humanPick = "";
+
+    switch(target.id) {
+        case "rock":
+            humanPick = "rock";
+            console.log(`Human picked ${humanPick}`)
+            return humanPick;
+            break;
+        case "paper":
+            humanPick = "paper";
+            console.log(`Human picked ${humanPick}`)
+            return humanPick;
+            break;
+        case "scissors":
+            humanPick = "scissors";
+            console.log(`Human picked ${humanPick}`)
+            return humanPick;
+            break;
+
+    }
+}));
+
 function getHumanChoice() {
     const humanChoice = prompt("Rock Paper Scissors?").toLowerCase();
     if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
@@ -77,4 +106,3 @@ function playRound(humanChoice,computerChoice) {
 //     }
 // }
 
-playGame();
