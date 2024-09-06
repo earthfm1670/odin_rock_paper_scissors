@@ -16,6 +16,9 @@ const btnContainer = document.getElementById("buttonContainer");
 const yourChoiceText = document.querySelector(".yourchoice");
 const computerChoiceText = document.querySelector(".computerchoice");
 const resultText = document.querySelector(".result");
+const humanPoint = document.querySelector(".humanscore");
+const computerPoint = document.querySelector(".computerscore");
+const declareWinner = document.querySelector(".winner");
 
 // function getHumanChoice() {
 //     const humanChoice = prompt("Rock Paper Scissors?").toLowerCase();
@@ -36,36 +39,56 @@ function playRound(humanChoice,computerChoice) {
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You lose! Paper beats rock"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else if (humanChoice === "rock" && computerChoice === "scissors") {
             humanScore += 1;
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You win! Rock beats scissors"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else if (humanChoice === "paper" && computerChoice === "scissors") {
             computerScore += 1;
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You lose! Scissors beats paper"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else if (humanChoice === "paper" && computerChoice === "rock") {
             humanScore += 1;
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You win! Paper beats rock"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else if (humanChoice === "scissors" && computerChoice === "rock") {
             computerScore += 1;
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You lose! Rock beats scissors"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else if (humanChoice === "scissors" && computerChoice === "paper") {
             humanScore += 1;
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "You win! scissors beats paper"
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
         } else {
             yourChoiceText.textContent = `You chose ${humanChoice}`
             computerChoiceText.textContent = `Computer chose ${computerChoice}`
             resultText.textContent = "It's a draw!"
-        }  
+            humanPoint.textContent = `Your Points: ${humanScore}`
+            computerPoint.textContent = `Computer Points: ${computerScore}`
+        }
+        if (humanScore === 5) {
+            declareWinner.textContent = "GGEZ You Win!"
+        }
+        if (computerScore === 5) {
+            declareWinner.textContent = "Get owned by the PC master race!"
+        }
     }
 
 btnContainer.addEventListener("click", (event => {
