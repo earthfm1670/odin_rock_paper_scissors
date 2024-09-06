@@ -13,6 +13,9 @@ const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 const btnContainer = document.getElementById("buttonContainer");
+const yourChoiceText = document.querySelector(".yourchoice");
+const computerChoiceText = document.querySelector(".computerchoice");
+const resultText = document.querySelector(".result");
 
 // function getHumanChoice() {
 //     const humanChoice = prompt("Rock Paper Scissors?").toLowerCase();
@@ -30,52 +33,38 @@ function playRound(humanChoice,computerChoice) {
 
         if (humanChoice === "rock" && computerChoice === "paper") {
             computerScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You lose! Paper beats Rock");
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You lose! Paper beats rock"
         } else if (humanChoice === "rock" && computerChoice === "scissors") {
             humanScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You win! Rock beats scissors");
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You win! Rock beats scissors"
         } else if (humanChoice === "paper" && computerChoice === "scissors") {
             computerScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You lose! Scissors beats paper");
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You lose! Scissors beats paper"
         } else if (humanChoice === "paper" && computerChoice === "rock") {
             humanScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You win! Paper beats rock");
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You win! Paper beats rock"
         } else if (humanChoice === "scissors" && computerChoice === "rock") {
             computerScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You lose! Rock beats scissors")
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You lose! Rock beats scissors"
         } else if (humanChoice === "scissors" && computerChoice === "paper") {
             humanScore += 1;
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("You win! scissors beats paper");
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "You win! scissors beats paper"
         } else {
-            console.log(`You chose ${humanChoice}`)
-            console.log(`Computer chose ${computerChoice}`)
-            console.log("It's a draw!")
-            // console.log(humanScore);
-            // console.log(computerScore);
+            yourChoiceText.textContent = `You chose ${humanChoice}`
+            computerChoiceText.textContent = `Computer chose ${computerChoice}`
+            resultText.textContent = "It's a draw!"
         }  
     }
 
