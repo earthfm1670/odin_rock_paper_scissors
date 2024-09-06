@@ -60,21 +60,21 @@ function playRound(humanChoice,computerChoice) {
         }  
     }
 
-function playGame() {
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log(`Human Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-    if (humanScore > computerScore) {
-        console.log("GGEZ kids");
-    } else if ( humanScore < computerScore) {
-        console.log("computer is definitely cheating");
-    } else {
-        console.log("Your code is probably broken");
-    }
-}
+// function playGame() {
+//     playRound(getHumanChoice(),getComputerChoice());
+//     playRound(getHumanChoice(),getComputerChoice());
+//     playRound(getHumanChoice(),getComputerChoice());
+//     playRound(getHumanChoice(),getComputerChoice());
+//     playRound(getHumanChoice(),getComputerChoice());
+//     console.log(`Human Score: ${humanScore}`);
+//     console.log(`Computer Score: ${computerScore}`);
+//     if (humanScore > computerScore) {
+//         console.log("GGEZ kids");
+//     } else if ( humanScore < computerScore) {
+//         console.log("computer is definitely cheating");
+//     } else {
+//         console.log("Your code is probably broken");
+//     }
+// }
 
 playGame();
